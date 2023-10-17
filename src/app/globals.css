@@ -44,4 +44,46 @@
       outline: 0;
   }
 
+  /* Hide the default checkbox */
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Style the custom checkbox container */
+  .custom-checkbox label {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Style the custom checkbox */
+  .custom-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border: 1.5px solid #6f6f6f; /* Change border properties as needed */
+    background: white; /* Change gradient */
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  /* Style the custom checkbox when checked */
+  .custom-checkbox input[type="checkbox"]:checked + label::before {
+    background: var(--Text-Style, linear-gradient(90deg, #885CF6 1.73%, rgba(126, 243, 229, 0.97) 101.49%)); /* Change background color */
+    border-image-source: var(--Text-Style, linear-gradient(90deg, #885CF6 1.73%, rgba(126, 243, 229, 0.97) 101.49%)); /* Change background color */
+    border-image-slice: 1;
+    mask: radial-gradient(circle at center, transparent 0%, white 0%); /* Checkmark mask */
+    border-radius: 4px;
+    content: '\2713'; /* Checkmark icon using Unicode character */
+    font-size: 13px; /* Adjust the font size to change the checkmark's size */
+    color: white; /* Color of the checkmark icon */
+    text-align: center; /* Center the icon horizontally */
+    line-height: 20px; /* Adjust line-height to center the icon vertically */
+  }
+
+  .fill-gradient {
+      fill: var(--Text-Style, linear-gradient(90deg, #885CF6 1.73%, rgba(126, 243, 229, 0.97) 101.49%));
+  }
+  
 }
