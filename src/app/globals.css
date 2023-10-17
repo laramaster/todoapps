@@ -85,5 +85,9 @@
   .fill-gradient {
       fill: var(--Text-Style, linear-gradient(90deg, #885CF6 1.73%, rgba(126, 243, 229, 0.97) 101.49%));
   }
+
+  .w-97p {
+    width: 97%;
+  }
   
 }

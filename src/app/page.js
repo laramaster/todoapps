@@ -73,10 +73,10 @@ export default function Home() {
 
   return (
     <>
-      <div className=' w-2/5 mx-auto h-full'>
+      <div className=' w-2/5 2xl:w-2/5 xl:w-1/2 lg:w-3/5 md:w-4/5 sm:w-11/12 xs:w-97p mx-auto h-full'>
         <div className='w-full flex items-center justify-center'>
           <div className='bg-gradient-to-r w-full h-full my-28 p-[1px] from-[#8B5CF6] to-[#7ef3e5f7] rounded-2xl'>
-            <div className="bg-white rounded-2xl px-12 py-8">
+            <div className="bg-white rounded-2xl px-12 sm:px-12 xs:px-5 py-8">
               <div className='text-center mb-7'>
                 <h2 className='font-medium text-slate-600 text-2xl'>Todo Lists Items</h2>
               </div>
