@@ -25,6 +25,9 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if(!inputData) return;
+
     const newItem = {
       id: nextId,
       text: inputData,
@@ -83,7 +86,7 @@ export default function Home() {
               <div className=''>
                 <form onSubmit={handleSubmit}>
                   <div className='flex items-center justify-center space-x-3'>
-                    <input type="text" onChange={(e) => setInputData(e.target.value)} value={inputData} className='w-full border-b input-focus-none border-slate-100 py-1.5 placeholder:text-sm placeholder:text-slate-300 text-base' placeholder='Enter Your Task here...' />
+                    <input type="text" onChange={(e) => setInputData(e.target.value)} value={inputData} className='w-full border-b input-focus-none border-slate-100 py-1.5 placeholder:text-sm placeholder:text-slate-300 text-base' placeholder='Enter Your Task here...' required />
                     <button type='submit' className='bg-gradient px-5 py-2.5 rounded-lg text-sm text-white flex items-center space-x-1'><UilPlus size={18} className='inline-block'/> <span>Add</span></button>
                     <div className='bg-gradient-to-r p-[1px] from-[#8B5CF6] to-[#7ef3e5f7] rounded-lg'>
                       <button onClick={handleCopyTodos} type='button' className=' bg-white text-base px-3.5 py-2 rounded-lg'><UilCopy className='inline-block text-slate-500' size={20} /></button>
